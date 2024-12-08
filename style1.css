@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Bg2.jpeg);
+    background-size: cover;
+}
+
+.earth {
+    position: absolute;
+    left: 25rem;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgb(2, 0, 34) url(earth1.png);
+    background-size: cover;
+    box-shadow: inset 0px -20px 50px 10px #00ffff80,
+        0px 0px 30px 6px #00ffff70;
+    transform-style: preserve-3d;
+    transform: rotate(100deg);
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 530px 0;
+    }
+
+    from {
+        transform: rotate(0deg)translatex(70px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)translatex(70px) rotate(-360deg);
+    }
+}
+
+
+
+.animation-box {
+    width: 50%;
+    height: 27.5rem;
+    background: transparent;
+}
+
+.animation-container {
+    width: 100rem;
+    height: 30rem;
+}
+
+.first-text {
+    font-size: 4.4rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 5s;
+    color: rgba(35, 209, 0, 0.911);
+}
+
+.second-text {
+    font-size: 3.4rem;
+    position: absolute;
+    top: 8.5rem;
+    opacity: 0;
+    animation-name: rightFadeInOut;
+    animation-delay: 3s;
+    animation-duration: 6s;
+    color: rgb(224, 9, 9);
+}
+
+.third-text {
+    transform: rotate(-90deg);
+    font-size: 2rem;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    opacity: 0;
+    animation-name: topFadeOutVertical;
+    animation-delay: 7.5s;
+    animation-duration: 20s;
+    color: #ff00c8;
+    white-space: nowrap;
+}
+
+.fourth-text {
+    font-size: 3.4rem;
+    position: absolute;
+    top: 10.5rem;
+    left: 10%;
+    opacity: 0;
+    color: #9c1041;
+    animation-name: fadeInOut;
+    animation-delay: 9s;
+    animation-duration: 10s;
+}
+
+.fifth-text {
+    font-size: 5rem;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    color: #e7b70b;
+    animation-name: bottomFadeOut;
+    animation-delay: 13s;
+    animation-duration: 9s;
+}
+
+.sixth-text {
+    font-size: 5rem;
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
+    opacity: 0;
+    color: #ed6103d6;
+    animation-name: topFadeOutHorizontal;
+    animation-delay: 16s;
+    animation-duration: 12s;
+}
+
+@keyframes topFadeOut {
+    0% {
+        position: absolute;
+        top: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bottomFadeOut {
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        bottom: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes topFadeOutVertical {
+    0% {
+        position: absolute;
+        top: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 45%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rightFadeInOut {
+    0% {
+        position: absolute;
+        right: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        right: 10rem;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 10rem;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes topFadeOutHorizontal {
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        bottom: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+to {
+    translate: 0 0;
+    scale: 100% 1;
+}
